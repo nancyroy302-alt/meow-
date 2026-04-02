@@ -1,4 +1,3 @@
-
 name: Build Windows EXE
 
 on:
@@ -26,10 +25,10 @@ jobs:
         
     - name: Build EXE
       run: |
-        pyinstaller --onefile --noconsole --name "FacebookVotingBot" bot.py
+        pyinstaller --onefile --name "VotingBot" bot.py
         
     - name: Upload EXE
       uses: actions/upload-artifact@v4
       with:
-        name: FacebookVotingBot-EXE
-        path: dist/*.exe
+        name: VotingBot-EXE
+        path: dist/VotingBot.exe
